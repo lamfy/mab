@@ -7,7 +7,7 @@ body {text-align: justify;}
 """
 st.markdown(style, unsafe_allow_html=True)
 
-st.markdown("### Game")
+st.markdown("### National University of Singapore")
 st.markdown(
     """
     <b>Instructions:</b> You have 100 tries. 
