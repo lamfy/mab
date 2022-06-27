@@ -90,7 +90,7 @@ with col2b:
     st.write("Total: ", st.session_state.score)
     
 with col4b:
-    st.write("Result: ", st.session_state.last)
+    st.write("Previous: ", st.session_state.last)
 
 with col6b:
     st.write("Left: ", st.session_state.tries)
