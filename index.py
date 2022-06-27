@@ -10,7 +10,9 @@ st.markdown(style, unsafe_allow_html=True)
 st.markdown("### National University of Singapore")
 st.markdown(
     """
-    <b>Instructions:</b> You have 100 tries. 
+    <b>Instructions:</b> You have five dice which might or might not be fair.
+    During each turn, you must roll one of the five dice and observe the result ("result").
+    Your goal is to maximise the total result ("total") across 25 turns. Good luck 🍀
     """,
     unsafe_allow_html=True)
 
@@ -20,7 +22,7 @@ if "score" not in st.session_state:
     st.session_state["score"] = 0
     
 if "tries" not in st.session_state:
-    st.session_state["tries"] = 10
+    st.session_state["tries"] = 25
     
 if "last" not in st.session_state:
     st.session_state["last"] = 0
@@ -84,13 +86,13 @@ col1b, col2b, col3b, col4b, col5b, col6b, col7b = st.columns(7)
 with col1b: pass
 with col3b: pass
 with col5b: pass
-with col6b: pass
+with col7b: pass
 
 with col2b:
     st.write("Total: ", st.session_state.score)
     
 with col4b:
-    st.write("Previous: ", st.session_state.last)
+    st.write("Result: ", st.session_state.last)
 
 with col6b:
     st.write("Left: ", st.session_state.tries)
